@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Lukky Third Person COntroller Tutorial"
+config/name="lukkys_third_person_contoller_tutorial"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
