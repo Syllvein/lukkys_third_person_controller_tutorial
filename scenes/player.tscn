@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpu5f533o8tx8"]
+
+[ext_resource type="PackedScene" uid="uid://bdq6ajic6fjrf" path="res://assets/models/mixamo_base.glb" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://dgavf7sg7755i" path="res://scripts/player.gd" id="1_g2els"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3vyb7"]
+height = 1.75122
+radius = 0.3
+
+[node name="player" type="CharacterBody3D"]
+script = ExtResource("1_g2els")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.880981, 0)
+shape = SubResource("CylinderShape3D_3vyb7")
+
+[node name="mixamo_base" parent="." instance=ExtResource("1_3vyb7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="camera mount" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.318674, 1.50269, 1.9759)
+
+[node name="Camera3D" type="Camera3D" parent="camera mount"]
